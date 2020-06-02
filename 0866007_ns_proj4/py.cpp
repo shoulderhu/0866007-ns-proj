@@ -1,13 +1,11 @@
 #include <cstdio>
-#include <cstdlib>
-#include <curl/curl.h>
-
-#include <fcntl.h>     // open()
 #include <unistd.h>
+#include <fcntl.h>       // open()
+#include <sys/socket.h>  // socket()
 
 int main() {
-
     int fd;
+
     if ((fd = open("/var/X/test.txt", O_RDWR)) == -1) {
         perror("/var/X/test.txt");
     } else {
@@ -20,6 +18,11 @@ int main() {
         close(fd);
     }
 
+    if ((fd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
+        perror("socket()");
+    } else {
+        close(fd);
+    }
 
     return 0;
 }
