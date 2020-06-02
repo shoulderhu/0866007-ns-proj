@@ -1,9 +1,0 @@
-#include <tunables/global>
-
-/usr/local/bin/px {
-    #include <abstractions/base>
-
-    deny network,
-
-    /var/Y/*    rw,
-}
