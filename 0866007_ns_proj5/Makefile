@@ -1,10 +1,10 @@
 CXX = g++
-CFLAG = -g -Wall
+CFLAG = -g -Wall -std=c++11
 
 all: px
 
 %.o: %.cpp
-	$(CXX) -c $<
+	$(CXX) -c $< $(CFLAG)
 
 px: px.o
 	$(CXX) -o $@ $^ -lcurl
@@ -12,7 +12,9 @@ px: px.o
 
 py: py.o
 	$(CXX) -o $@ $^
-	sudo cp $@ /usr/local/bin/
+	sudo cp $@ /var/Y/
 
 clean:
 	rm -rf px px.o py py.o
+
+.PHONY: all clean
