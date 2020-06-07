@@ -1,9 +1,9 @@
 #include <tunables/global>
 
-/usr/local/bin/py {
+/var/Y/py {
     #include <abstractions/base>
 
     deny network,
 
-    /var/Y/*    rw,
+    /var/Y/*    mrw,
 }

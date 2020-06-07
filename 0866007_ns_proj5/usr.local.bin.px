@@ -1,9 +1,19 @@
 #include <tunables/global>
 
 /usr/local/bin/px {
-    #include <abstractions/base>
+  #include <abstractions/base>
+  #include <abstractions/nameservice>
+  #include <abstractions/user-tmp>
 
-    deny network,
+  network tcp,
 
-    /var/Y/*    rw,
+  /bin/dash mrix,
+  /usr/bin/g++-5 mrix,
+  /usr/bin/x86_64-linux-gnu-* mrix,
+  /usr/include/** r,
+  /usr/lib/gcc/x86_64-linux-gnu/5/* mrix,
+
+  /var/X/* rw,
+  /var/Y/* rw,
+  /var/Y/py px,
 }
