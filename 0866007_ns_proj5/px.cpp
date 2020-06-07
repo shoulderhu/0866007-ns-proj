@@ -2,8 +2,6 @@
 #include <cstdlib>     // EXIT_FAILURE
 #include <curl/curl.h>
 #include <unistd.h>    // fork()
-#include <fcntl.h>     // mkdir()
-#include <sys/stat.h>
 #include <sys/wait.h>  // wait()
 
 int main(int argc, char *argv[]) {
