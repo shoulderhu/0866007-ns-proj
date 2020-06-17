@@ -1,0 +1,3 @@
+/home/user/0866007-ns-project/0866007_ns_proj5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/user/0866007-ns-project/0866007_ns_proj5/cmake-build-debug/CMakeFiles/untitled.dir
+/home/user/0866007-ns-project/0866007_ns_proj5/cmake-build-debug/CMakeFiles/edit_cache.dir
